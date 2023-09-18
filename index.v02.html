@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Intro to MIDI | Intro to Digital Music</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<!-- <link rel="stylesheet" href="dist/theme/black.css"> -->
+		<link rel="stylesheet" href="dist/theme/lg.intro.slides.v01.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<!-- <link rel="stylesheet" href="plugin/highlight/monokai.css"> -->
+		<link rel="stylesheet" href="plugin/highlight/vs.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<svg > 
+						<symbol id="s-text">
+							<text text-anchor="middle" x="50%" y="80%">Intro to MIDI</text>
+							<text text-anchor="middle" x="51%" y="81%">Intro to MIDI</text>
+						</symbol>
+						<g class = "g-ants">
+							<use xlink:href="#s-text" class="text-copy"></use>
+							<use xlink:href="#s-text" class="text-copy"></use>
+							<use xlink:href="#s-text" class="text-copy"></use>
+							<use xlink:href="#s-text" class="text-copy"></use>
+							<use xlink:href="#s-text" class="text-copy"></use>
+						</g>
+					</svg>
+					<h5 style="position:absolute;right:10px;" class="fade-in-text">Introduction to Digital Music — Louis Goldford (2023)</h5>
+				</section>
+				<section data-auto-animate>
+					<h5 style="text-align: left;">These slides will discuss:</h5>
+				</section>
+				<section data-auto-animate>
+					<h5 style="text-align: left;">These slides will discuss:</h5>
+					<div style="font-size: 0.65em; text-align: left;" data-auto-animate-id="list">
+						<h6>What is MIDI?</h6>
+						<h6 class="fragment">Software + Hardware</h6>
+						<h6 class="fragment">The MIDI Technical Standard</h6>
+						<h6 class="fragment">MIDI For the Future</h6>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h5 style="text-align: left;">These slides will discuss:</h5>
+					<div style="font-size: 0.65em; text-align: left;" data-auto-animate-id="list">
+						<h6>What is MIDI?</h6>
+							<ul>
+								<li>MIDI Definition + Use Cases</li>
+								<li>MIDI History</li>
+							</ul>
+						<h6>Software + Hardware</h6>
+							<ul>
+								<li>Cables, Connectors, and MIDI Controllers</li>
+								<li>Using MIDI in a Sequencer</li>
+							</ul>
+						<h6>The MIDI Technical Standard</h6>
+							<ul>
+								<li>"Note-On," "Note-Off," and Other Messages</li>
+								<li>Program Change + Control Change Messages</li>
+								<li>MIDI File Formats + Sound Banks</li>
+							</ul>
+
+						<h6>MIDI For the Future</h6>
+							<ul>
+								<li>Expressive New MIDI Controllers</li>
+								<li>MPE (MIDI Polyphonic Expression)</li>
+								<li>MIDI Over USB, TRS, Ethernet, Wireless</li>
+							</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<p>
+							<b><u>M</u>usical <u>I</u>nstrument <u>D</u>igital <u>I</u>nterface</b> (MIDI) is a technical standard that allows multiple electronic devices to <b>synchronize</b> data in real-time.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<p>
+							<b><u>M</u>usical <u>I</u>nstrument <u>D</u>igital <u>I</u>nterface</b> (MIDI) is a technical standard that allows multiple electronic devices to <b>synchronize</b> data in real-time.
+						</p>
+						<p>
+							These could be <b>synthesizers</b> playing the same notes and rhythms...
+						</p>
+						<!-- <video data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>					</div> -->
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<p>
+							<b><u>M</u>usical <u>I</u>nstrument <u>D</u>igital <u>I</u>nterface</b> (MIDI) is a technical standard that allows multiple electronic devices to <b>synchronize</b> data in real-time.
+						</p>
+						<p>
+							These could be <b>synthesizers</b> playing the same notes and rhythms...
+						</p>
+						<p>
+							Or <b>faders on a mixer</b> that move up and down on their own,<br>controlled by computer software...
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<p>
+							<b><u>M</u>usical <u>I</u>nstrument <u>D</u>igital <u>I</u>nterface</b> (MIDI) is a technical standard that allows multiple electronic devices to <b>synchronize</b> data in real-time.
+						</p>
+						<p>
+							These could be <b>synthesizers</b> playing the same notes and rhythms...
+						</p>
+						<p>
+							Or <b>faders on a mixer</b> that move up and down on their own,<br>controlled by computer software...
+						</p>
+						<p>
+							Or <b>lights</b> that blink in time with music.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<p>
+							In other words, MIDI connects all of these devices:
+						</p>
+						<img data-src="img/midi.devices.v01.drawio.png" class="fade-in-text" alt="MIDI connections">
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<p>
+							MIDI allows all of these devices to share the same <b>event data</b>:
+						</p>
+						<p class="fragment">
+							<b>Events</b> (like notes) are triggered on all devices <b>at the same time</b>. 
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<h6>Use Cases — What is MIDI Used For?</h6>
+						<ul>
+							<li class="fragment">
+								Realtime <b>synchronization</b> of musical playback on digital instruments, such as keyboards, samplers, and <a href="https://youtu.be/BswLMDavu80?t=86" target="_blank">Disklaviers</a> 
+							</li>
+							<li class="fragment">
+								<b>Controlling</b> analog instruments, such as <a href="https://youtu.be/b0p9rH8K3uY?t=57" target="_blank">Eurorack modular synthesizers</a>  
+							</li>
+							<li class="fragment">
+								<b>Synchronizing</b> <a href="https://youtu.be/ybVoFn04Y94?t=332" target="_blank">lighting networks</a>
+							</li>
+							<li class="fragment">
+								Offline <b>sequencing</b> musical notes and rhythms in a musical work
+							</li>
+							<li class="fragment">
+								<b>Editing</b> a note's paramters: rhythm, duration, pitch, loudness, or timbre
+							</li>
+							<li class="fragment">
+								<b>Controlling</b> virtual musical instruments, like plug-ins and VSTs
+							</li>
+							<li class="fragment">
+								<b>Storing</b> a musical score in a small file format
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<h6>Use Cases — What is MIDI Used For?</h6>
+						<h5>
+							Note: Realtime vs. Offline
+						</h5>
+						<p class="fragment">
+							<b>Realtime</b>: <em>synchronous</em>, instantly rendered within a <br> fraction of a second in <b>performance</b>
+						</p>
+						<p class="fragment">
+							<b>Offline</b>: <em>not synchronous</em>, rendered later, <br> after careful editing, in a <b>composition</b>
+						</p>
+
+
+					</div>
+				</section>
+
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<h6>Are MIDI and <span id="red">sound</span> the same thing?</h6>
+						<p class="fragment">
+							Good question, but... <b>NO!</b>
+						</p>
+						<p class="fragment">
+							Sound signals represent pressure waves travelling through air.
+						</p>
+						<p class="fragment">
+							Sound can be stored in a <b>digital or analog medium</b>
+						</p>
+						<p class="fragment">
+							such as CDs or magnetic tape.
+						</p>
+						<p class="fragment">
+							MIDI is a <b>digital</b> format, but <b>does not<br>transmit recorded sound</b> and is not a signal.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<h6>MIDI is like a musical score...</h6>
+						<p class="fragment">
+							It can store very <b>accurate timing information</b> 
+						</p>
+						<p class="fragment">
+							about musical parameters like<br><b>pitch</b>, <b>rhythm</b>, <b>duration</b>, <b>tempo</b>, and <b>timbre</b>.
+						</p>
+						<p class="fragment">
+							MIDI can be stored in <b>small files:</b><br>
+							ca. 1000 times less space than audio files!
+						</p>
+						<p class="fragment">
+							Like <b>musical scores</b>, MIDI can be stored in simple <b>text files</b>. 
+						</p>
+						<p class="fragment">
+							<span id="green"><em>MIDI is a very <b>efficient</b> way of<br>
+								storing <b>musical instructions</b> on a computer.</em></span>
+						</p>
+
+					</div>
+				</section>	
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<h6>Is MIDI a <span id="red">computer language</span>?</h6>
+						<p class="fragment">
+							Good question, but... <b>NO!</b>
+						</p>
+						<p class="fragment">
+							Computer languages allow you to construct <b>systems of logic</b>,
+						</p>
+						<p class="fragment">
+							and include many <b>classes</b> (i.e., data types),
+						</p>
+						<p class="fragment">
+							which can process everything from numbers to letters to sound files.
+						</p>
+						<p class="fragment">
+							MIDI, however, is far more basic than that... 
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<h6>Is MIDI a <span id="red">computer language</span>?</h6>
+						<p>
+							MIDI <b>only stores numbers</b>. 
+						</p>
+						<p class="fragment">
+							These numbers do not represent sound,<br>but only event <b>triggers</b>.
+						</p>
+						<p class="fragment">
+							MIDI cannot represent any other type of data<br> and only performs one simple task:
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<h6>Is MIDI a <span id="red">computer language</span>?</h6>
+						<p>
+							MIDI sends <b>binary messages</b> that are <b>interpreted</b><br>exactly at the moment they are sent and received...
+						</p>
+						<p class="fragment">
+							So, when you depress a key on the keyboard,
+						</p>
+						<p class="fragment">
+							or move a fader on the mixer,
+						</p>
+						<p class="fragment">
+							<b>instantly</b> a sound is produced,
+						</p>
+						<p class="fragment">
+							or a light switches on!
+						</p>	
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — MIDI Definition + Use Cases</h4>
+					</div>
+					<div class="special-body">
+						<h6>Is MIDI a <span id="red">computer language</span>?</h6>
+						<p>
+							MIDI is therefore <b><em>not</em></b> a computer language
+						</p>
+						<p class="fragment">
+							and is best thought of as a simple<br><b>control protocol</b>.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — History — The 1960s</h4>
+					</div>
+					<div id="BobDonText">
+						<p class="fragment">
+							These synthesis pioneers did not use MIDI.
+						</p>
+						<p class="fragment">
+							Before MIDI, cables transported <b>control voltage</b>,
+						</p>
+						<p class="fragment">
+							delivering <b>electricity</b> as a sole means<br>of controlling sonic events.
+						</p>
+					</div>
+					<div id="Don">
+						<img data-src="img/buchlaabuchlasys.l1.jpg" class="fade-in-text" alt="Don Buchla">
+						<h6 style="font-size: 0.5em;">Don Buchla</h6>
+					</div>
+					<div id="Bob">
+						<img data-src="img/moog.jpeg" class="fade-in-text" alt="Bob Moog">
+						<h6 style="font-size: 0.5em;">Bob Moog</h6>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — History — The 1970s</h4>
+					</div>
+					<div id="seventies-synths">
+						<img data-src="img/1970s.synths.png" class="fade-in-text" alt="1970s synths">
+						<h6 style="font-size: 0.5em;">1970s synths</h6>
+					</div>
+					<div class="special-body">
+						<p>
+							<b>Many companies</b> designed their own synths, 
+						</p>
+						<p class="fragment">
+							but these instruments could not communicate...
+						</p>
+						<p class="fragment">
+							<b>Korg</b> and <b>Yamaha</b> used one connection format,
+						</p>
+						<p class="fragment">
+							but <b>Moog</b> and <b>Roland</b> used another.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — History — 1981</h4>
+					</div>
+					<!-- <div id="seventies-synths">
+						<img data-src="img/1970s.synths.png" class="fade-in-text" alt="1970s synths">
+						<h6 style="font-size: 0.5em;">1970s synths</h6>
+					</div> -->
+					<div class="special-body">
+						<p class="fragment">
+							In 1981, Dave Smith of <b>Sequential Circuit</b> developed<br>a <b>message</b> to send <b>pitch data</b> at a 19600 baud rate.
+						</p>
+						<p class="fragment">
+							Ikutaro Kakehashi of <b>Roland</b> also worked on a <b>common language</b><br>for synthesizers shared by <b>Yamaha</b>, <b>Korg</b>, and <b>Akai</b>.
+						</p>
+						<p class="fragment">
+							<b>Roland</b> and <b>Korg</b> began discussing the need for a <b>standard</b> for all<br>synthesizers at <b>AES</b> ("Audio Engineering Society") in California.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — History — 1982</h4>
+					</div>
+					<div id="eighties-synths">
+						<img data-src="img/SC.and.Roland.1982.png" class="fade-in-text" alt="Prophet 600 and Jupiter 6 (1982)">
+						<h6 style="font-size: 0.5em;">Sequential Circuit Prophet 600 and Roland Jupiter 6 (1982)</h6>
+						<p class="fragment">
+							By 1982, the first MIDI-compliant synthesizers were born.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — History — 1982</h4>
+					</div>
+					<div class="special-body">
+						<p class="fragment">
+							In 1982, the first <b>technical specification</b> was published on the MIDI standard:
+						</p>
+						<ul>
+							<li class="fragment">
+								MIDI messages included: <b>Note-On</b> and <b>Note-Off</b>, <b>Pitch Bend</b>, <b>Control Change</b>, <b>Aftertouch</b>, and <b>SysEx</b>.
+							</li>
+							<li class="fragment">
+								A standard 5-pin MIDI cable and port
+							</li>
+							<li class="fragment">
+								IN, OUT, and THRU connections among synthesizers
+							</li>
+							<li class="fragment">
+								Transmission of up to 16 channels per port
+							</li>
+							<li class="fragment">
+								Baud rate of 31250
+							</li>
+							<li class="fragment">
+								Establishment of the <b>IMA</b> (International MIDI Association) to coordinate future work on the standard
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>What is MIDI? — History — Early Computer MIDI</h4>
+					</div>
+					<div id="computer-midi-1980s">
+						<img data-src="img/computer.midi.1985-1989.png" class="fade-in-text" alt="Computer MIDI — 1980s">
+						<p class="fragment">
+							The first <b>computer and software implementations</b> of MIDI were born.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4 style="font-size: smaller;">Software + Hardware — Cables, Connectors, and MIDI Controllers</h4>
+					</div>
+					<div>
+						<img data-src="img/midi.cable.v02.png" class="fade-in-text" alt="MIDI DIN cable">
+						<p class="fragment">
+							MIDI messages were first transmitted on <b>5-pin DIN</b> cables...
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4 style="font-size: smaller;">Software + Hardware — Cables, Connectors, and MIDI Controllers</h4>
+					</div>
+					<div id="midi-ports">
+						<img data-src="img/Yamaha_DX7_MIDI_connectors.jpeg" class="fade-in-text" alt="MIDI DIN cable">
+						<p class="fragment">
+							...which connected a synthesizer's <b>IN</b>, <b>OUT</b>, and <b>THRU</b> ports:
+						</p>
+						<ul>
+							<li class="fragment"><b>IN</b> receives MIDI messages.</li>
+							<li class="fragment"><b>OUT</b> sends MIDI messages.</li>
+							<li class="fragment"><b>THRU</b> passes messages received by <b>IN</b>.</li>
+						</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4 style="font-size: smaller;">Software + Hardware — Cables, Connectors, and MIDI Controllers</h4>
+					</div>
+					<div id="midi-ports">
+						<img data-src="img/midi.thru.png" class="fade-in-text" alt="MIDI DIN cable">
+						<p class="fragment">
+							With MIDI <b>THRU</b> it is possible to connect several synths in a "daisy chain"
+						</p>
+						<p class="fragment">
+							and to control them all from one device (e.g., Instrument 1 above).
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4 style="font-size: smaller;">Software + Hardware — Cables, Connectors, and MIDI Controllers</h4>
+					</div>
+					<div id="midi-ports">
+						<img data-src="img/midi.thru.png" class="fade-in-text" alt="MIDI DIN cable">
+						<p>
+							But there were several problems with this <b>chain configuration</b>:
+						</p>
+						<ul>
+							<li class="fragment">16 channels must be <b>shared among all connected instruments</b>.</li>
+							<li class="fragment"><b>Latency</b> occurred at the end of the chain (e.g., Instrument 4).</li>
+							<li class="fragment">Messages could only be sent <em>to</em> the synths but not <em>from</em> them.<br>Yet, both directions are necessary for <b>computer sequencing</b>.</li>
+						</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4 style="font-size: smaller;">Software + Hardware — Cables, Connectors, and MIDI Controllers</h4>
+					</div>
+					<div id="star-config">
+						<img data-src="img/etoile.png" class="fade-in-text" alt="MIDI DIN cable">
+						<p>
+							A solution is the <b>star configuration</b>.
+						</p>
+						<ul>
+							<li class="fragment">One <b>"master"</b> computer controls any number of <b>"slaves."</b></li>
+							<li class="fragment">No <b>Latency</b> because of shorter connections.</li>
+							<li class="fragment">Each <b>slave</b> shares its own 16 channels over a unique physical connection.</li>
+							<li class="fragment">Notice the <b>MIDI interface</b> and <b>USB connection</b> in the center of the "star."</li>
+						</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4 style="font-size: smaller;">Software + Hardware — Using MIDI in a Sequencer</h4>
+					</div>
+					<div class="video-centered">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/aJg1UfePwTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p class="fragment">
+							Here, sequencer software (Ableton Live) <b>records</b> and <b>plays back</b> MIDI data. 
+						</p>
+						<p class="fragment">
+							MIDI "clips" store this data in a <a href="https://www.ableton.com/en/manual/editing-midi-notes-and-velocities/" target="_blank">piano roll editor</a> (bottom of screen).  
+						</p>
+						<p class="fragment">
+							The <b>sequencer</b> makes no sound by itself;<br>it only <b>triggers</b> notes played by software synthesizers.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4 style="font-size: smaller;">Software + Hardware — Using MIDI in a Sequencer</h4>
+					</div>
+					<div class="video-centered">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/aJg1UfePwTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p class="fragment">
+							The <b>keyboard</b> he plays functions as a <b>MIDI Controller</b>:
+						</p>
+						<p class="fragment">
+							it <b>controls</b> the playback of another MIDI device, like the software synth.
+						</p>
+						<p class="fragment">
+							After recording the MIDI information, the <b>sequencer</b> acts as a <b>controller</b><br>when it plays the software synth!
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4 style="font-size: smaller;">Software + Hardware — Using MIDI in a Sequencer</h4>
+					</div>
+					<div class="video-centered">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/cWaO9wS389I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p class="fragment">
+							Here, another sequencer (Apple Logic) <b>controls</b><br>2 other <b>peripherals</b>: the Korg NS5R and X5DR samplers.
+						</p>
+						<p class="fragment">
+							Sound <b>samples</b> are stored in the Korg periphals
+						</p>
+						<p class="fragment">
+							while the <b>sequencer</b> (Logic) again makes no sound by itself;<br>the software only <b>triggers</b> notes on the peripherals.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6 class="fragment">So... Where does this mad science come from?!</h6>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6>Each MIDI message includes 2 components:</h6>
+						<ul>
+							<li class="fragment">a <b>Status Byte</b>: Defines the message type and the channel number.</li>
+							<li class="fragment">and (a) <b>Data Byte(s)</b>: Binary numbers formatted for each type of message.</li>
+						</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6>All message components are sent in binary.</h6>
+						<p class="fragment">Binary: <b>lists</b> containing only digits 0 or 1,<br>which represent a number or letter</p>
+						<p class="fragment"><em>next slide:</em> how to convert a <br>base 10 number to a binary number...</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<div id="inch-calculator-icw" data-ct="decimal_to_binary" data-cw="320" data-ch="300" style="position: absolute; top: 5dvh;" data-cv="MTE2OTI2MDQ1MDE="><div id="inch-calculator-icwh">Decimal to Binary Converter</div><div id="inch-calculator-icwf"><a id="inch-calculator-icwi" href="https://www.inchcalculator.com/decimal-to-binary-converter/" target="_blank"><img id="inch-calculator-icwl" src="https://cdn.inchcalculator.com/e/inch-calculator-logo-tiny.png" alt="Inch Calculator Logo"><span id="inch-calculator-icwb">Inch Calculator</span></a></div></div><script src="https://cdn.inchcalculator.com/e/widgets.min.js" async defer></script>
+					</div>
+					<!-- <iframe src="https://www.rapidtables.com/convert/number/decimal-to-binary.html" data-preload></iframe> -->
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div id="status-byte">
+						<img data-src="img/status.byte.png" class="fade-in-text" alt="status byte">
+					</div>
+					<div style="position: relative; top: 35dvh;">
+						<h6>Status Byte</h6>
+						<p>Defines the message type and the channel number.</p>
+						<ul>
+							<li class="fragment"><b>1 bit</b></li>
+							<li class="fragment"><b>3 bits</b>: message type</li>
+							<li class="fragment"><b>4 bits</b>: MIDI channel number (0-15)</li>
+						</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6>Types of Messages (3 bits):</h6>
+							<table style="font-size: 0.65em;">
+								<thead><tr>
+									<th>binary</th>
+									<th>message type</th>
+									<th>description</th>
+								</tr></thead>
+								<tbody>
+									<tr>
+										<td><span id="nums-small">000</span></td>
+										<td><b>Note-Off</b></td>
+										<td>release a note</td>
+									</tr>
+									<tr>
+										<td><span id="nums-small">001</span></td>
+										<td><b>Note-On</b></td>
+										<td>start a note</td>
+									</tr>
+									<tr>
+										<td><span id="nums-small">011</span></td>
+										<td><b>Control Change</b></td>
+										<td>change continuous controller</td>
+									</tr>
+									<tr>
+										<td><span id="nums-small">100</span></td>
+										<td><b>Program Change</b></td>
+										<td>change sound</td>
+									</tr>
+									<tr>
+										<td><span id="nums-small">101</span></td>
+										<td><b>Aftertouch</b></td>
+										<td>global pressure per channel</td>
+									</tr>
+									<tr>
+										<td><span id="nums-small">010</span></td>
+										<td><b>Polyphonic Aftertouch</b></td>
+										<td>pressure for each key</td>
+									</tr>
+									<tr>
+										<td><span id="nums-small">110</span></td>
+										<td><b>Pitch Bend</b></td>
+										<td>glissando around a pitch value</td>
+									</tr>
+								</tbody>
+							</table>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6>Data Bytes</h6>
+						<p>Includes the data formatted for each type of message.</p>
+						<p class="fragment">
+							A <b>data byte</b> is 7 binary digits, which can represent<br>numbers ranging from 0 to 127.
+						</p>
+						<p class="fragment">
+							The number of data bytes following a status<br>byte depends on the type of message sent.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div id="data-bytes">
+						<img data-src="img/data.bytes.png" class="fade-in-text" alt="data bytes">
+						<h6 style="font-size: smaller;">Examples of Data Bytes</h6>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6>Note-On and Note-Off Messages</h6>
+						<p class="fragment">
+							Notice that these messages <em>(previous slide)</em> require <b>2 data bytes</b>:</p>
+						<p class="fragment">
+							One number represents <b>pitch</b> while the other represents <b>velocity</b>, or <b>loudness</b>.
+						</p>
+						<p class="fragment">
+							<b>Pitch</b> values (0-127) span the range of the orchestra.<br>MIDI note number 60 is middle C.
+						</p>
+						<p class="fragment">
+							<b>Velocity</b> values also range from 0 (silent) to 127 (loudest possible sound).
+						</p>
+						<p class="fragment">
+							A velocity value of 0 is considered a <b>Note-Off</b> message. 
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6>Note-On and Note-Off Messages</h6>
+						<p>
+							All "notes," then, require 2 MIDI messages:
+						</p>
+						<ul>
+							<li class="fragment">a <b>Note-On</b> message, which sends the note's <b>pitch</b> and <b>velocity</b>,<br>and which also <b>"starts"</b> the note, and</li>
+							<li class="fragment">a <b>Note-Off</b> message, which <b>"turns off"</b> the corresponding note<br>after it is "held" for some <b>duration</b>.</li>
+						</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div id="single-note">
+						<img data-src="img/one.midi.note.sequenced.png" class="fade-in-text" alt="data bytes">
+					</div>
+					<div class="special-body" style="font-size: smaller; position: relative; top: 5dvh;">
+						<p class="fragment">
+							Here is a single note in a <b>piano roll sequencer</b>.
+						</p>
+						<p class="fragment">
+							The playhead, moving from left to right, first rolls over <b>point A</b>, <br> which triggers the <b>Note-On</b> message:
+						</p>
+						<p class="fragment">
+							<span id="nums-small"><span id="red">1</span><span id="green">001</span><span id="blue">0001</span> <span id="orange">0111100</span> <span id="purple">1100100</span> </span>meaning:
+						</p>
+						<p class="fragment">
+							<span id="red">status byte</span> + <span id="green">type: Note-On</span> + <span id="blue">channel: 1</span> + <span id="orange">MIDI note: 60</span> + <span id="purple">Velocity: 100</span>
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div id="single-note">
+						<img data-src="img/one.midi.note.sequenced.png" class="fade-in-text" alt="data bytes">
+					</div>
+					<div class="special-body" style="font-size: smaller; position: relative; top: 5dvh;">
+						<!-- <p>
+							Here is a single note in a <b>piano roll sequencer</b>.
+						</p> -->
+						<p class="fragment">
+							After some <b>duration</b> (length of the blue bar), the playhead rolls over <b>point B</b>, <br> which triggers the <b>Note-Off</b> message:
+						</p>
+						<p class="fragment">
+							<span id="nums-small"><span id="red">1</span><span id="green">000</span><span id="blue">0001</span> <span id="orange">0111100</span> <span id="purple">0000000</span> </span>meaning:
+						</p>
+						<p class="fragment">
+							<span id="red">status byte</span> + <span id="green">type: Note-Off</span> + <span id="blue">channel: 1</span> + <span id="orange">MIDI note: 60</span> + <span id="purple">Velocity: 0 (silence!)</span>
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6>MIDI File (.mid) Formats</h6>
+						<p>Musical scores can be represented as MIDI files in 2 ways:</p>
+						<ul>
+							<li class="fragment"><b>Format 0:</b> All MIDI data is reduced to a <b>single track</b>,<br>but parsed by channel number in each MIDI message.</li>
+							<li class="fragment"><b>Format 1:</b> Each channel is represented as a separate track; useful for <b>sequencers</b>, where each instrument is placed on a separate track.</li>
+						</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6>MIDI File (.mid) Formats</h6>
+						<p class="fragment">
+							<b>.mid</b> files can be opened by many <b>music notation programs</b>
+						</p>
+						<p class="fragment">
+							like <b>Finale</b>, <b>Sibelius</b>, <b>MuseScore</b>, <b>LilyPond</b>, or <b>Dorico</b>.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="special-body">
+						<h6><a href="https://de.wikipedia.org/wiki/General_MIDI" target="_blank">General MIDI:</a> A Standard Sound Bank</h6>
+						<p class="fragment">A bank of sounds used by all synthesizers,<br>including software synthesizers available on computers.</p>
+						<p class="fragment">Users can call the same instrument represented by a<br><b>program change number</b> on any MIDI-compatible instrument.</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header">
+						<h4>MIDI Technical Standard — Encoding</h4>
+					</div>
+					<div class="video-centered">
+						<h6><a href="https://de.wikipedia.org/wiki/General_MIDI" target="_blank">General MIDI:</a> A Standard Sound Bank</h6>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/IYdq06l8qXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>
+							Here, all 128 General MIDI <b>programs</b> are played, one at a time on the same pitch, using the internal synth that comes installed on Windows computers.
+						</p>
+					</div>
+				</section>
+
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — Expressive New MIDI Controllers</h4>
+					</div>
+					<div class="video-centered">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/nQwWEgVVPf0?start=248" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>
+							The TouchMe MIDI controller uses the <b>electrical resistance</b><br>of connected objects to send MIDI messages.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — Expressive New MIDI Controllers</h4>
+					</div>
+					<div class="video-centered">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/JBoNHw7KKK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>
+							The Roli Seaboard controllers allow for <b>continuous change</b><br>in pitch, timbre, and other synthesis parameters. 
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — Expressive New MIDI Controllers</h4>
+					</div>
+					<div class="video-centered">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/B6P38s5DTkE?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>
+							The Karlax controller uses <b>gyroscope sensors</b><br>to generate <b>gesture data</b> and can be performed by<br>a musician or a dancer, for example.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — Expressive New MIDI Controllers</h4>
+					</div>
+					<div class="video-centered">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/RhLLL77nq7c?start=65" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>
+							The Sensel Morph uses many <b>pressure sensors</b> to generate continuous MIDI data that can mapped to gestures in musical and non-musical situations. 
+						</p>					
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MPE — MIDI Polyphonic Expression</h4>
+					</div>
+					<div class="special-body">
+						<h6><u>M</u>IDI <u>P</u>olyphonic <u>E</u>xpression (MPE)</h6>
+						<p class="fragment">
+							The <b>continuous pitch</b> (<em>glissando</em>) of these modern controllers<br>(<em>on previous slides</em>) are made possible thanks to <b>MPE.</b> 
+						</p>
+						<p class="fragment">
+							Normally, <b>Pitch Bend</b> messages are sent on <em>all</em> channels at once, but...
+						</p>
+						<p class="fragment">
+							MPE allows messages like <b>Pitch Bend</b> to be sent for <b>each individual note</b>...
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MPE — MIDI Polyphonic Expression</h4>
+					</div>
+					<div class="special-body">
+						<h6><u>M</u>IDI <u>P</u>olyphonic <u>E</u>xpression (MPE)</h6>
+						<p class="fragment">
+							In other words, MPE gives <em>each note</em> its own pitch bend,<br>modulation, pressure, dynamics, and other parameters.
+						</p>
+						<p class="fragment">
+							Imagine: <em>each</em> finger or <em>each</em> key acts as its <b>own MIDI controller</b>!
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MPE — MIDI Polyphonic Expression</h4>
+					</div>
+					<div class="special-body">
+						<h6><u>M</u>IDI <u>P</u>olyphonic <u>E</u>xpression (MPE)</h6>
+						<p class="fragment">
+							Like 1982, many instrument builders were trying to address<br>problems in their <b>own way</b>, without communicating among one another.
+						</p>
+						<p class="fragment">
+							Similarly, they needed a <b>standard language</b>.
+						</p>
+						<p class="fragment">
+							In 2018, MPE was adopted as a standard for polyphonic<br>expressiveness by the International MIDI Association.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MPE — MIDI Polyphonic Expression</h4>
+					</div>
+					<div class="special-body">
+						<h6><u>M</u>IDI <u>P</u>olyphonic <u>E</u>xpression (MPE)</h6>
+						<p>
+							Remember how a single DIN cable can carry 16 MIDI channels?
+						</p>
+						<p class="fragment">
+							Traditionally, these were used for 16 different instruments,<br>each with its own <b>Program Change</b> values.
+						</p>
+						<p class="fragment">
+							MPE <em>repurposes</em> the use of MIDI channels: each channel is used<br>for a single note, allowing a <b>polyphony of expressive messaging<br>per note</b> on a single instrument.
+						</p>
+						<p class="fragment">
+							The system permits a maximum polyphony of <b>15 notes</b>, reserving<br><b>one master channel</b> for messages that apply to all notes.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MPE — MIDI Polyphonic Expression</h4>
+					</div>
+					<div>
+						<div class="video-centered">
+							<h6><u>M</u>IDI <u>P</u>olyphonic <u>E</u>xpression (MPE)</h6>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/YEEE-Hjmpdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<p>
+								A good visualization for how MPE utilizes MIDI messaging
+							</p>
+						</div>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MIDI Over USB, TRS, Ethernet, Wireless</h4>
+					</div>
+					<div class="special-body">
+						<h6>MIDI Over USB Cables</h6>
+						<p class="fragment">
+							Today, MIDI devices are frequently connected with faster <b>USB cables</b>,<br>instead of the older and slower DIN cables.
+						</p>
+						<p class="fragment">
+							A single USB cable can act as 16 independent MIDI cables,<br>each with 16 channels,<br>for a total of 256 MIDI channels. 
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MIDI Over USB, TRS, Ethernet, Wireless</h4>
+					</div>
+					<div class="special-body">
+						<h6>MIDI Over TRS Cables</h6>
+						<p class="fragment">
+							For distances over more than just a few meters,<br>a USB or MIDI cable will experience <b>latency</b> and <b>drops in signal</b>.
+						</p>
+						<p class="fragment">
+							A solution has been to use <b>TRS</b> cables.<br>Like XLR audio cables, TRS can transmit over long distances. 
+						</p>
+						<p class="fragment">
+							With the growing use of Eurorack analog modular synthesizers,<br>which normally use small TS patch cables (close to TRS),<br>it is increasingly common to find <b>MIDI-to-TRS cables</b><br>connecting controllers to Eurorack modules.
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MIDI Over USB, TRS, Ethernet, Wireless</h4>
+					</div>
+					<div class="special-body">
+						<h6>MIDI Over Ethernet</h6>
+						<p class="fragment">
+							<b>Ethernet cables</b> (used for internet connections)<br>are now frequently used to transmit audio.
+						</p>
+						<p class="fragment">
+							Now, we also use <b>ethernet cables</b> to transmit<br>large amounts of MIDI data over large distances,
+						</p>
+						<p class="fragment">
+							especially useful when using today's elaborate <b>MIDI interfaces</b>,<br>which connect many devices in an expansive <b>network.</b>
+						</p>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MIDI Over USB, TRS, Ethernet, Wireless</h4>
+					</div>
+					<div class="video-centered">
+						<h6>Wireless MIDI</h6>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/gDxM-L3VaoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						<p>
+							Today, you can even connect MIDI over wireless networks like <b>Bluetooth</b>! 
+						</p>				
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — Advanced Topics</h4>
+					</div>
+					<div class="special-body">
+						<h6>Advanced MIDI Topics</h6>
+						<p class="fragment">
+							In our other seminars, we frequently discuss these<br>and other advanced MIDI issues, like: 
+						</p>
+						<ul>
+							<li class="fragment">
+								Human gestural control of MIDI
+							</li>
+							<li class="fragment">
+								Microtonal resolution of pitch using MIDI
+							</li>
+							<li class="fragment">
+								Using MIDI values to control custom <b>samplers</b> and <b>microcontrollers</b>
+							</li>
+							<li class="fragment">
+								Mapping MIDI values to <b>control voltage</b> and other synthesis parameters. 
+							</li>
+							<li class="fragment">
+								Interfacing MIDI control with sensors and <b>real-world objects</b> 
+							</li>
+							<li class="fragment">
+								Broadcasting MIDI <b>over the internet</b> 
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="special-slide" data-auto-animate>
+					<div class="special-header" style="font-size: smaller;">
+						<h4>MIDI For the Future — MIDI Over USB, TRS, Ethernet, Wireless</h4>
+					</div>
+					<div class="special-body">
+						<h6>That's the end!</h6>
+						<p>
+							We hope you learned something useful<br>to use in your artistic practice!
+						</p>				
+					</div>
+				</section>
+			
+
+
+
+
+
+				<!-- <section data-background-video="https://youtu.be/cWaO9wS389I" data-background-video-loop data-background-video-muted>
+					<h2>Video</h2>
+				</section> -->
+
+
+
+
+
+				
+				<!-- <section>
+					<div id="hidden" style="display:none;">
+						<div id="header">
+							<div id="header-left">HEADER-LEFT</div>
+							<div id="header-right">HEADER-RIGHT</div>
+							<div id="footer-left">FOOTER-LEFT</div>
+						</div>
+					</div>
+				</section> -->
+
+
+
+			</div>
+		</div>
+
+		<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+			// 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+			var header = $('#header').html();
+			if ( window.location.search.match( /print-pdf/gi ) ) {
+				Reveal.addEventListener( 'ready', function( event ) {
+					$('.slide-background').append(header);
+				});
+			}
+			else {
+				$('div.reveal').append(header);
+		   }
+		</script> -->
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				progress: true,
+				slideNumber: "c/t",
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
